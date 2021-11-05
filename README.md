@@ -10,11 +10,11 @@ Flask api to obtain Amazon product details(title, price, rating). Celery to do a
 5. The celery app periodically scrape the database. It retrieve all asins from the database. Scrapes it. Inspect if any price of the row for the same product is existing in table is changed, if changed simply it add them as a new row (for different dates). If we are actually scraping the db twice in a single date, and if there is no price, it modify the existing scrape_date with the latest or simply ignore
 6. When user inputs a product from the frontend, if that product does have a history prices, return to them in a separate UI component as shown in above, if that product is not present, scrape it & add it to database for future scrapes
 ## Tech Stack 
-  Python
-  Flask 
-  requests 
-  Flask-SQLAlchemy 
-  Celery 
+  Python,
+  Flask, 
+  requests, 
+  Flask-SQLAlchemy, 
+  Celery, 
   Redis
 # Procedure
 1) Created a celery app to integrate with existing flask app.
